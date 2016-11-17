@@ -1,0 +1,13 @@
+1. Install nightwatch
+
+  $ git clone https://github.com/nightwatchjs/nightwatch.git
+  $ cd nightwatch
+  $ npm install
+
+2. Download ChromeDriver 2.24.417412 into bin/chromedriver
+
+3. Download selenium-server-standalone(3.0.1) into into bin/selenium-server-standalone-3.0.1.jar
+
+4. Run one of the tests
+
+  $ nightwatch/bin/nightwatch -t tests/rednoise.js 
