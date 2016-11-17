@@ -1,0 +1,4 @@
+nightwatch
+bin/*
+*.log
+
