@@ -11,12 +11,11 @@ module.exports = {
                 .pause(1000);
         });
         //STEP 2: Go through normal pages
-        end = start + 1;
         console.log('          Urls: ' + start + '-' + end + ' of ' + urls.length);
         urls.slice(start, ++end).forEach(function(url) {
             client.url(url)
-                .waitForElementVisible('body', 1000)
-                .assert.visible('body');
+                .pause(1000)
+                .verify.visible('body');
 
         });
         //STEP 3: Export JSON file to download
