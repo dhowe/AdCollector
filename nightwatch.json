@@ -11,14 +11,15 @@
       "webdriver.chrome.driver": "./bin/chromedriver"
     }
   },
-
   "test_settings": {
     "default": {
       "desiredCapabilities": {
         "browserName": "chrome",
         "version": "latest",
         "javascriptEnabled": true
-      }
+      },
+       "skip_testcases_on_fail": false,
+       "end_session_on_fail": false
     }
   },
   "test_workers" : {
