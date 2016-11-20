@@ -1,8 +1,21 @@
 var urls = require('./generalList.js').urls;
-var keyword = ["finance", "credit card", "loan", "morgage"];
+var keyword = ["finance", "credit card", "business", "loan", "morgage"];
 
 module.exports = {
     AdCollector: function(client) {
+
+        //STEP 0:Log in 
+        client.url("http://www.google.com")
+            .waitForElementVisible('#gb_70', 2000)
+            .click("#gb_70")
+            .pause(1000)
+            .setValue('input[type=email]', 'adnauseambusinesscollector@gmail.com')
+            .click("#next")
+            .pause(1000)
+            .setValue('input[type=password]', 'adnauseamAdCollector')
+            .click("#signIn")
+            .pause(3000)
+
         //STEP 1: Search in Google with related keywords 
         keyword.forEach(function(keyword) {
             client
