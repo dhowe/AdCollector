@@ -16,7 +16,11 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "version": "latest",
-        "javascriptEnabled": true
+        "javascriptEnabled": true,
+        "chromeOptions" : {
+           "args" : ["--disable-plugins"]
+        }
+
       },
        "skip_testcases_on_fail": false,
        "end_session_on_fail": false
